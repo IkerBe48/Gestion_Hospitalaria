@@ -22,26 +22,7 @@ public:
     string especialidad;
     bool disponible;
 };
-// Clase Cita
-class Cita {
-public:
-    unique_ptr<Paciente> paciente;
-    unique_ptr<Medico> medico;
-    string fecha;
-    int urgencia; // 1: baja, 2: media, 3: alta
 
-    Cita(Paciente* p, Medico* m, string fecha, int urgencia)
-        : paciente(p), medico(m), fecha(fecha), urgencia(urgencia) {
-    }
-};
-
-// Clase Hospital
-class Hospital {
-private:
-    vector<unique_ptr<Paciente>> pacientes;
-    vector<unique_ptr<Medico>> medicos;
-    vector<unique_ptr<Cita>> citas;
-};
 
 int main()
 {
